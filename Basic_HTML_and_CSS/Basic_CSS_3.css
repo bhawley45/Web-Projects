@@ -1,0 +1,9 @@
+table {
+	background-color: black;
+	color:red;
+	border:gold;
+}
+
+td:hover{
+	background-color:blue;
+}
