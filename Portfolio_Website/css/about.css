@@ -1,0 +1,50 @@
+.row {
+    background-color: papayawhip;
+}
+
+.column-text {
+    float: left;
+    width: 60%;
+    /* This ensures the column takes up half of the page width */
+    padding: 10px;
+    /* This ensures there is space between the top of the column and our headings */
+    height: min(450px, 50vw);
+    /* This sets the height of the column to 400px -  this may need to be adjusted depending on the text you enter */
+}
+
+/* Screens 1005px and smaller will display a scroll bar if the text overflows the column height */
+@media screen and (max-width: 1005px) {
+    .column-text {
+        overflow: auto;
+    }
+}
+
+.column-image {
+    float: left;
+    width: 40%;
+    height: min(450px, 30vw);
+    overflow: hidden;
+    border-radius: 15%;
+}
+
+.column-image img {
+    width: auto;
+    height: 100%;
+}
+
+/* This class is applied to the columns in the final row, overriding the height and padding to provide more 
+    room for the contact form  while keeping the rest of the formatting from Column_1 or Column_2 */
+.Column_tall {
+    padding-top: 3.5%;
+    height: 450px;
+}
+
+/* This inserts something after the content of selected elements (in this case the elements with class "Row") */
+.row:after {
+    content: "";
+    /* By leaving this blank, we are allowing the footer (covered lower down) to be displayed - removing it makes the footer overwrite a column */
+    display: table;
+    /* The display property specifies the type of display behavior; the table value tells the browser to treat the element as a table */
+    clear: both;
+    /* This clears any other elements from floating on the left or the right of an element */
+}

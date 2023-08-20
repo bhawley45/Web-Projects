@@ -5,9 +5,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <link rel="stylesheet" type="text/css" href="./css/navBar.css">
     <link rel="stylesheet" type="text/css" href="./css/mainVideo.css">
+    <link rel="stylesheet" type="text/css" href="./css/portfolio.css">
+    <link rel="stylesheet" type="text/css" href="./css/about.css">
     <title>Brandon J Hawley</title>
 </head>
 
@@ -23,10 +25,11 @@
             </button>
         </div>
         <ul class="navbar-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Home</a></li>
+            <!-- Keep #home unidentified so it take to top of webpage -->
+            <li><a href="#projects">Portfolio</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
         <div class="navbar-social">
             <a href="https://www.facebook.com/brandon.hawley.3114" target="_blank"><img
@@ -39,7 +42,7 @@
     </nav>
 
     <!--Background video-->
-    <div id="home">
+    <div>
         <div class="video-container">
             <video autoplay muted loop>
                 <source src="./video/smoke_flame.mp4" type="video/mp4">
@@ -49,7 +52,7 @@
         </div>
     </div>
 
-    <!--Video text-->
+    <!--Video Overlay-->
     <div class="video-overlay">
         <p class="white-text">Crafting Code; Shaping Worlds</p>
         <div class="image-container">
@@ -57,56 +60,138 @@
         </div>
     </div>
 
-    <!--About section-->
-    <div class="Row" id="about">
+    <div class="divide-line"></div>
+    <h2 class="portfolio-text" id="projects">Previous Adventures!</h2>
+
+    <!--Portfolio Section-->
+    <div class="portfolio">
+        <button class="nav-button left" onclick="scrollProjects('left')">&#60;</button>
+        <div class="projects-container">
+            <div class="projects">
+                <div class="project">
+                    <a href="repository_url_1">
+                        <img src="./images/StickwBG.png" alt="Noble Night">
+                    </a>
+                    <h2>Noble Night</h2>
+                    <p>
+                        This is a random description that I'm thinking of on the spot. This is a excellent
+                        description for the picture that sits above; and furthermore demostrates with certainty that
+                        this element works as originally intended.
+                    </p>
+                </div>
+                <div class="project">
+                    <a href="repository_url_2">
+                        <img src="thumbnail_2.jpg" alt="Project 2">
+                        <h2>Project 2</h2>
+                        <p>Description of Project 2</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="repository_url_3">
+                        <img src="thumbnail_3.jpg" alt="Project 3">
+                        <h2>Project 3</h2>
+                        <p>Description of Project 3</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="repository_url_4">
+                        <img src="thumbnail_4.jpg" alt="Project 4">
+                        <h2>Project 4</h2>
+                        <p>Description of Project 4</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="repository_url_5">
+                        <img src="thumbnail_5.jpg" alt="Project 5">
+                        <h2>Project 5</h2>
+                        <p>Description of Project 5</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="repository_url_6">
+                        <img src="thumbnail_6.jpg" alt="Project 6">
+                        <h2>Project 6</h2>
+                        <p>Description of Project 6</p>
+                    </a>
+                </div>
+                <div class="project">
+                    <a href="repository_url_7">
+                        <img src="thumbnail_7.jpg" alt="Project 7">
+                        <h2>Project 7</h2>
+                        <p>Description of Project 7</p>
+                    </a>
+                </div>
+                <!-- Add more project elements as needed -->
+            </div>
+        </div>
+        <button class="nav-button right" onclick="scrollProjects('right')">&#62;</button>
+    </div>
+
+    <div class="divide-line"></div>
+
+    <!--About section PT1-->
+    <div class="row" id="about">
         <!--Left column-->
-        <div class="Column_2">
-            <img src="" alt="Replace with your own image and description">
+        <div class="column-image">
+            <img src="./images/B_H_Funny.JPG" alt="Absolutely hilarious image">
         </div>
         <!--Right column-->
-        <div class="Column_1">
-            <h1>About</h1>
+        <div class="column-text">
+            <h2 class="center">About Me</h2>
             <p>
-                I am a software developer who loves to code! As a father of two, I enjoy time with my family and
-                traveling.
-                <br>
-                <br>I am a graduate of <a href="https://www.learncodinganywhere.com" target="_blank">The Tech
-                    Academy</a>’s Software Developer Boot Camp, and trained and experienced in the following web and
-                programming languages: HTML, CSS, JavaScript, SQL, C# and more.
-                <br>
-                <br>I am a full-stack developer and would love to work with you on your project. <a
-                    href="#Contact">Contact</a> me below!
+                Hello there, I'm Brandon Hawley, a passionate software architect, game enthusiast, and code virtuoso on
+                an endless quest to turn imagination into reality.
+                <br><br>
+                With a keyboard as my trusty sword and lines of code as my spells, I embark on epic adventures in the
+                world of code. My journey began with Java, and my skill tree only expanded from there. The elusive
+                realms of C++, C#, Python, and more opened their doors to my quest. These languages, like languages of
+                ancients, empower me to craft experiences that captivate and amaze in a new era.
+                <br><br>
+                When I'm not busy summoning code spells, you can find me exploring the uncharted territories of AI and
+                machine learning, determined to unlock their potential in gaming and beyond.
             </p>
         </div>
     </div>
 
-    <!--GitHub section-->
-    <div class="Row" id="GitHub">
+    <div class="divide-line"></div>
+
+    <!--About section PT2-->
+    <div class="row">
         <!--Left column-->
-        <div class="Column_1">
-            <h1>GitHub</h1>
+        <div class="column-text">
+            <h2 class="center">The Quest...</h2>
             <p>
-                You can view my coding projects on my GitHub profile here:
-                <br>
-            <p class="center"><a href="https://github.com/the-tech-academy" target="_blank">The Tech Academy Github</a>
-            </p>
+                My love for both the art and science of programming led me to dance with Unreal Engine and wield the
+                mighty Unity Engine. In these domains, I shape worlds, breathe life into characters, and unleash the
+                power of interactive storytelling.
+                <br><br>
+                But it's not just about the pixels and polygons; it's about the magic that happens when creativity meets
+                code. The symphony of lines of text coming together to create awe-inspiring visuals and immersive
+                gameplay is my true passion. Each project I embark upon is a canvas, where logic, innovation, and
+                creativity unite to craft experiences that linger in the minds of players.
+                <br><br>
+                My ultimate dream? To take my place among the pioneers of game design, to contribute to narratives that
+                resonate, and to inspire the next generation of digital storytellers.
+                <br><br>
+
             </p>
         </div>
         <!--Right column-->
-        <div class="Column_2">
-            <a href="https://github.com/the-tech-academy" target="_blank">
-                <img src="" alt="GitHub Logo"></a>
+        <div class="column-image">
+            <img src="./images/StickwBG.png" alt="The noble stick-figure night" class="knight">
         </div>
     </div>
+
+    <div class="divide-line"></div>
 
     <!--Contact section-->
-    <div class="Row" id="Contact">
+    <div class="row" id="contact" style="visibility: hidden;">
         <!--Contact image, left column-->
-        <div class="Column_2 Column_tall">
+        <div class="column-image Column_tall">
             <img src="" alt="Contact_Image">
         </div>
         <!--Contact form, right column-->
-        <div class="Column_1 Column_tall">
+        <div class="column-text Column_tall">
             <h1>Contact</h1>
             <!--This specifies where and how to send the form data; we are leaving it blank-->
             <form action="" method="POST">
@@ -124,10 +209,8 @@
 
     <!--Footer section-->
     <footer>
-        <p>
-        <p class="center">&copy Prosper Consulting Inc., <a href="https://www.learncodinganywhere.com/"
-                target="_blank">The Tech Academy</a></p>
-        <br>
+        <p class="center">
+            &copy<a href="https://www.AftermathGameStudio.com/" target="_blank">Aftermath Studio</a>
         </p>
     </footer>
 

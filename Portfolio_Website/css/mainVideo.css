@@ -1,12 +1,4 @@
 /* Styling for portfolio title text */
-.video-overlay {
-    /*width: min(2560px, 100vw);*/
-
-    /* REDUNDANT????????????? */
-
-    /* Keep 16:9 aspect ratio, limit video size to prevent pixelation*/
-}
-
 .white-text {
     color: white;
     text-align: center;
@@ -73,7 +65,8 @@
     transform: translate(-50%, -50%);
     /* Center image element in viewport (w/ slight left offset)*/
 
-    width: min(1076px, 42vw);
+    /*width: min(1076px, 42vw);================================================*/
+    width: min(630px, 42vw);
     /* 1076px keeps image from scaling past container limit */
     height: auto;
     z-index: 1;
@@ -87,7 +80,8 @@
     left: 50%;
     transform: translateX(-50%);
     /* Center the container horizontally */
-    width: min(2560px, 100vw);
+    /*width: min(2560px, 100vw);=============================================*/
+    width: min(1500px, 100vw);
     /* Keeps video full width - up to 2560px: */
     /*-> 100% of viewport unless it exceeds 2560px */
     height: calc(100% - 50px);
@@ -107,18 +101,18 @@
 }
 
 /* Ensure the video container covers the viewport */
-@media screen and (min-aspect-ratio: 2560/1440) {
+@media screen and (min-aspect-ratio: 1500/844) {
     .video-container {
         height: 100vh;
     }
 }
 
-/* Screens that are 576px and smaller will not display the background video 
-@media screen and (max-width: 250px) {
-    #Typing_Video {
-        display: none;
+/*@media screen and (min-aspect-ratio: 2560/1440) { ======================================
+    .video-container {
+        height: 100vh;
     }
 }*/
+
 
 
 
