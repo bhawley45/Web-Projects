@@ -27,6 +27,7 @@ q {
 footer {
     padding: 2%;
     /* This gives the footer padding that is equal to 2% of the width of the element's area */
+    background-image: url(../images/Dark_Stars.jpg);
 }
 
 /* Paragraph elements */
@@ -62,11 +63,6 @@ p {
     box-sizing: border-box;
     /* This creates a box with a border within which we will place most of our text */
 }
-
-
-
-
-
 
 /***** CONTACT FORM STYLING *****/
 /* input[type=text] targets all text input sections of the contact form */

@@ -1,10 +1,16 @@
 //=-=-=-=-=-=-=-= Navigation bar drop down menu =-=-=-=-=-=-=-=
 
+// Get references to the toggle button and the dropdown menu
 const navbarToggle = document.querySelector(".navbar-toggle");
 const navbarLinks = document.querySelector(".navbar-links");
 
+// Toggle the "active" class on the dropdown menu when the toggle button is clicked
 navbarToggle.addEventListener("click", () => {
     navbarLinks.classList.toggle("active");
+});
+// Hide the dropdown menu when the cursor leaves the menu area
+navbarLinks.addEventListener("mouseleave", () => {
+    navbarLinks.classList.remove("active");
 });
 
 
