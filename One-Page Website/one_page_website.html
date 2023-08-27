@@ -4,9 +4,11 @@
 <head>
 	<meta charset="utf-8">
 	<title>Light-years Ahead</title>
+	<script src="./js/script.js" defer></script>
 	<link rel="icon" type="image/png" href="./images/TerraNovaLogo.png">
-	<link rel="stylesheet" href="./CSS/shared.css">
-	<link rel="stylesheet" href="./CSS/animations.css">
+	<link rel="stylesheet" type="text/css" href="./CSS/shared.css">
+	<link rel="stylesheet" type="text/css" href="./CSS/animations.css">
+	<link rel="stylesheet" type="text/css" href="./CSS/modal.css">
 </head>
 
 <body>
@@ -54,7 +56,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./images/thumb/tier1/thumbnail_7.jpg">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal(); currentSlide(3)">
 							<h3 class="overlay-header">Click to Learn More</h3>
 							<p>Welcome to... CosmoNest Apartments</p>
 						</div>
@@ -66,7 +68,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./images/thumb/tier1/thumbnail_8.jpg">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal(); currentSlide(2)">
 							<h3 class="overlay-header">Click to Learn More</h3>
 							<p>Welcome to... CosmoNest Apartments</p>
 						</div>
@@ -78,7 +80,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./images/thumb/tier1/thumbnail_9.jpg">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal(); currentSlide(1)">
 							<h3 class="overlay-header">Click to Learn More</h3>
 							<p>Welcome to... CosmoNest Apartments</p>
 						</div>
@@ -90,7 +92,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./images/thumb/tier2/thumbnail_6.jpg">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal(); currentSlide(4)">
 							<h3 class="overlay-header">Click to Learn More</h3>
 							<p>Welcome to... TerraTower Residences</p>
 						</div>
@@ -102,7 +104,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./images/thumb/tier2/thumbnail_5.jpg">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal(); currentSlide(5)">
 							<h3 class="overlay-header">Click to Learn More</h3>
 							<p>Welcome to... TerraTower Residences</p>
 						</div>
@@ -114,7 +116,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./images/thumb/tier2/thumbnail_4.jpg">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal(); currentSlide(6)">
 							<h3 class="overlay-header">Click to Learn More</h3>
 							<p>Welcome to... TerraTower Residences</p>
 						</div>
@@ -126,7 +128,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./images/thumb/tier3/thumbnail_3.jpg">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal(); currentSlide(7)">
 							<h3 class="overlay-header">Click to Learn More</h3>
 							<p>Welcome to... Celectial Dodeca Villas</p>
 						</div>
@@ -138,7 +140,7 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./images/thumb/tier3/thumbnail_2.jpg">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal(); currentSlide(8)">
 							<h3 class="overlay-header">Click to Learn More</h3>
 							<p>Welcome to... Celectial Dodeca Villas</p>
 						</div>
@@ -150,16 +152,124 @@
 				<div class="photo-container">
 					<div class="photo">
 						<img src="./images/thumb/tier3/thumbnail_1.jpg">
-						<div class="photo-overlay">
+						<div class="photo-overlay" onclick="openModal(); currentSlide(9)">
 							<h3 class="overlay-header">Click to Learn More</h3>
 							<p>Welcome to... Celectial Dodeca Villas</p>
 						</div>
 					</div>
 				</div>
 				<!-- End Photo Container 9-->
+
 			</div>
 		</div>
 	</section>
+
+	<!-- The Modal/Lightbox -->
+	<div id="myModal" class="modal">
+		<span class="close cursor" onclick="closeModal()">&times;</span>
+		<div class="modal-content">
+
+			<div class="mySlides">
+				<div class="numbertext">1 / 9</div>
+				<img src="./images/thumb/tier1/thumbnail_9.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">2 / 9</div>
+				<img src="./images/thumb/tier1/thumbnail_8.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">3 / 9</div>
+				<img src="./images/thumb/tier1/thumbnail_7.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">4 / 9</div>
+				<img src="./images/thumb/tier2/thumbnail_6.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">5 / 9</div>
+				<img src="./images/thumb/tier2/thumbnail_5.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">6 / 9</div>
+				<img src="./images/thumb/tier2/thumbnail_4.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">7 / 9</div>
+				<img src="./images/thumb/tier3/thumbnail_3.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">8 / 9</div>
+				<img src="./images/thumb/tier3/thumbnail_2.jpg" style="width:100%">
+			</div>
+
+			<div class="mySlides">
+				<div class="numbertext">9 / 9</div>
+				<img src="./images/thumb/tier3/thumbnail_1.jpg" style="width:100%">
+			</div>
+
+			<!-- Next/previous controls -->
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			<!-- Caption text -->
+			<div class="caption-container">
+				<p id="caption">This is a caption :)</p>
+			</div>
+
+			<!-- Thumbnail image controls -->
+			<div class="column">
+				<img class="demo" src="./images/thumb/tier1/thumbnail_9_sm.jpg" onclick="currentSlide(1)"
+					alt="CosmoNest Apartments">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="./images/thumb/tier1/thumbnail_8_sm.jpg" onclick="currentSlide(2)"
+					alt="CosmoNest Apartments">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="./images/thumb/tier1/thumbnail_7_sm.jpg" onclick="currentSlide(3)"
+					alt="CosmoNest Apartments">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="./images/thumb/tier2/thumbnail_6_sm.jpg" onclick="currentSlide(4)"
+					alt="TerraTower Residences">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="./images/thumb/tier2/thumbnail_5_sm.jpg" onclick="currentSlide(5)"
+					alt="TerraTower Residences">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="./images/thumb/tier2/thumbnail_4_sm.jpg" onclick="currentSlide(6)"
+					alt="TerraTower Residences">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="./images/thumb/tier3/thumbnail_3_sm.jpg" onclick="currentSlide(7)"
+					alt="Celectial Dodeca Villas">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="./images/thumb/tier3/thumbnail_2_sm.jpg" onclick="currentSlide(8)"
+					alt="Celectial Dodeca Villas">
+			</div>
+
+			<div class="column">
+				<img class="demo" src="./images/thumb/tier3/thumbnail_1_sm.jpg" onclick="currentSlide(9)"
+					alt="Celectial Dodeca Villas">
+			</div>
+		</div>
+	</div>
 
 	<section id="mission-container">
 		<div class="mission-block">
